@@ -1,16 +1,23 @@
-let num = 49;
-if (num < 49){
-    console.log('Это не верно!');
-} else if (num>100 && num <300) {
-    console.log('Больше 100');
-    
-} else if (num<100) {
-    console.log('Меньше ста');
-    
-} else{
-    console.log('Какая-то шняга');
-    
+/* let a = 9;
+if (a !== 9){
+    console.log('Добро пожаловать');    
+} else {
+    console.log('Доступ запрещен');
 }
+ */
 
-(num == 49)? console.log('Верно'): console.log('Неверно');
+ const button = document.querySelector('button');
+ const input = document.querySelector('.age')
+// () => стрелочная функция
+ button.onclick = () => {
+ let num = +input.value;    
+ if (num >=16 && num <80){
+     console.log('Добро пожаловать');
+     
+ } else if (num >= 100 && num < 140) {
+     console.log('Вам позновато!');
+   } else {
+console.log('Хватит прикалываться! Я вычислю вас по ай пи');
 
+   }
+ }
