@@ -1,40 +1,42 @@
-/* 'use strict';
-let num = 20;
+let box = document.getElementById('box'),
+    btn = document.getElementsByTagName('button'),
+    circle = document.getElementsByClassName('circle'),
+    heart = document.querySelectorAll('.heart'),
+    oneHeart = document.querySelector('.heart'),
+    wrapper = document.querySelector('.wrapper');
 
-function showFirstMessage(text){
-    alert(text);
-    console.log(num);
+
+box.style.backgroundColor = 'green';
+btn[1].style.borderRadius = '100%';
+
+circle[1].style.backgroundColor = 'yellow';
+circle[0].style.backgroundColor = 'red';
+circle[2].style.backgroundColor = 'green';
+
+//for (let i = 0; i<heart.length; i++){
+//  heart[i].style.backgroundColor='blue';
+//}
+
+//heart.forEach(function(item, i, hearts){
+//  item.style.backgroundColor='yellow';  
+//});
+
+let div = document.createElement('div'),
+    text = document.createTextNode('Текстовый узел');
+
+div.classList.add('black');
+//document.body.appendChild(div);
+//wrapper.appendChild(div);
+
+//div.innerHTML = '<h1>Hello</h1>';
+div.textContent = 'Hello,world!';
+
+
+document.body.insertBefore(div, circle[0]);
+document.body.removeChild(circle[1]);
+wrapper.removeChild(heart[1]);
+
+document.body.replaceChild(btn[1], circle[1]);
+
+console.log(div);
     
- }
-
-showFirstMessage('Hello, world!');
-console.log(num);
- */
-
-//Функия работает до объявления в коде
-
-let calc = (a,b) => a*b;
-
-
-console.log(calc(3,4));
-console.log(calc(4,2));
-
-
-function retVar(){
-    let num = 50;
-    return num;
-}
-
-let anotherNum = retVar();
-console.log(anotherNum);
-
-let str = 'Test';
-console.log(str.length);
-
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-
-let hor = "15.3px";
-//console.log(Math.round(hor));
-console.log(parseInt(hor));
-console.log(parseFloat(hor));
